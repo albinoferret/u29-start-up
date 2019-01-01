@@ -29,12 +29,15 @@ Article.prototype.getClickedWord = function (event) {
         }
     }
 
-    return range.toString();
+    return range.toString().replace(/[^a-zA-Z]/g, '');
 };
 
 var article = new Article();
 
 document.addEventListener('click', function(e) {
-    console.log(article.getClickedWord(e));
+    var word = article.getClickedWord(e);
+    if (word) {
+        console.log(word);
+    }
 }, false);
 
