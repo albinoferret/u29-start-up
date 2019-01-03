@@ -15,7 +15,8 @@ yarn start
 ```
 
 ## 4.aws-export.js更新
-src/aws-export.jsを最新のものに差し替えてください。
+app/aws-export.jsを最新のものに差し替える。
+※リモートリポジトリにはpushしないこと。
 
 ## 5. バーコードのURLを携帯で読み取る
 yarn start(expo start)実行後に表示されるバーコードをスマホで読み取る。
@@ -26,6 +27,6 @@ yarn start(expo start)実行後に表示されるバーコードをスマホで�
 
 ## 【備考】
 + windowsでyarn global addが効かない問題
-⇒Pathにコマンド「yarn global bin」の結果を追加
+⇒Pathにコマンド「yarn global bin」の結果を追加。
 https://www.slightedgecoder.com/2017/12/30/yarn-global-add-command-not-work-windows/
 
