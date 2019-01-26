@@ -1,0 +1,28 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-native": "^0.57.24",
+    "aws-amplify": "^1.1.18",
+    "aws-amplify-react-native": "^2.1.6",
+    "expo": "^31.0.2",
+    "global": "^4.3.2",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-typescript-transformer": "^1.2.11",
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0",
+    "native-base": "^2.10.0",
+    "react-native-super-grid": "^2.4.4",
+    "react-navigation": "^3.0.9"
+  },
+  "private": true
+}
