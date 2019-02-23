@@ -1,0 +1,23 @@
+{
+  "name": "Lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "date-utils": "^1.2.21",
+    "treetagger": "^0.1.1"
+  },
+  "devDependencies": {
+    "aws-sam-local": "^0.2.11",
+    "aws-sdk": "^2.404.0"
+  },
+  "scripts": {
+    "start": "sam local invoke -e list.json -n env.json",
+    "create": "aws s3 mb s3://myflashcards.u29-start-up.tk/ --endpoint-url=http://localhost:4572 --profile localstack",
+    "upload": "aws s3 cp ./json_files/ishii-flashcard.json s3://myflashcards.u29-start-up.tk/Flashcards/ishii-flashcard.json --endpoint-url=http://localhost:4572 --profile localstack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

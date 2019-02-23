@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Local
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+    Function:
+        Runtime: nodejs8.10
+        Timeout: 30
+        Handler: index.handler
+
+Resources:
+    HandleMyFlashcards:
+        Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+        Properties:
+            Environment:
+                Variables:
+                    NODE_ENV:    ""
+                    TZ:          ""
+                    BUCKET_NAME: ""
+                    CARDS_DIR:   ""
+            CodeUri: ./

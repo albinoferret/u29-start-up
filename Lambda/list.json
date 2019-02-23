@@ -1,0 +1,27 @@
+{
+  "field": "listWords",
+  "arguments": "",
+  "identity": {
+    "sub": "98b5ccfc-4f68-46a3-82ee-80aaaaba6a65",
+    "issuer": "https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_lBHG5UKhs",
+    "username": "ishii",
+    "claims": {
+      "sub": "98b5ccfc-4f68-46a3-82ee-80aaaaba6a65",
+      "aud": "3hmnjp644pkqcam59088g3ng2i",
+      "email_verified": true,
+      "event_id": "a7b30bab-2a2b-11e9-b4e6-5141761d7039",
+      "token_use": "id",
+      "auth_time": 1549470259,
+      "iss": "https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_lBHG5UKhs",
+      "cognito:username": "ishii",
+      "exp": 1549473859,
+      "iat": 1549470259,
+      "email": "ishii1492@gmail.com"
+    },
+    "sourceIp": [
+      "153.229.20.229"
+    ],
+    "defaultAuthStrategy": "ALLOW",
+    "groups": null
+  }
+}
