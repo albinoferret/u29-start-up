@@ -1,50 +1,54 @@
-import React from 'react';
+import React from 'react'
 import * as Expo from 'expo'
-import Amplify, {API, graphqlOperation} from 'aws-amplify'
-import { withAuthenticator, SignIn, ConfirmSignIn, VerifyContact, SignUp, ConfirmSignUp, ForgotPassword} from 'aws-amplify-react-native'
+import { StyleSheet } from 'react-native'
+import Amplify from 'aws-amplify'
+import { withAuthenticator, SignIn, ConfirmSignIn, VerifyContact, SignUp, ConfirmSignUp, ForgotPassword } from 'aws-amplify-react-native'
+import { Scene, Router, Actions, } from 'react-native-router-flux'
 import awsExports from './aws-exports'
-import { Container, Header, Title, Content, Button, Left, Right, Body, Icon, Text, Card, CardItem, Badge } from 'native-base';
+import { HomePage } from './src/pages/home/home.page'
+import { MyFlashCardsPage } from './src/pages/myFlashCards/myFlashCards.page'
+import { FlashCardDetailPage } from './src/pages/flashCardDetail/flashCardDetail.page'
+import { DEFAULT_THEME as THEME } from './src/common/theme'
+import { initData } from './src/data/init/initializer'
 
 // 認証情報の設定
 Amplify.configure(awsExports)
 
-interface Flashcard {
-  word: String
-  translation: String
-}
-
-// ダミーのレスポンスを返すQuery
-const QUERY_MY_FLASHCARDS = `query myFlashcards {
-  myFlashcards {
-    word
-    translation
-  }
-}`
-
 class App extends React.Component<any, any>{
+  styles = StyleSheet.create({
+    navBar: {
+      backgroundColor: THEME.NAV_BAR_BG_COLOR,
+    },
+    title: {
+      // right: Dimensions.get('window').width / 4,
+      margin: "auto",
+      // flex:1,
+      fontFamily: 'normal',
+      color: THEME.NAV_BAR_TITLE_COLOR,
+      fontWeight: "300",
+      fontSize: 20,
+    }
+  })
+
   constructor(props) {
     super(props)
     this.state = {
-      myFlashcards: [],
       isReady: false
     }
   }
 
   componentWillMount() {
     this.loadFonts()
+    initData()
   }
 
   loadFonts = async () => {
     await Expo.Font.loadAsync({
       Roboto: require("./node_modules/native-base/Fonts/Roboto.ttf"),
+      Meiryo: require("./assets/fonts/Meiryo.ttf"),
       Roboto_medium: require("./node_modules/native-base/Fonts/Roboto_medium.ttf"),
     })
     this.setState({ isReady: true })
-  }
-
-  listFlashcards = async ()=> {
-    const myFlashcards: any = await API.graphql(graphqlOperation(QUERY_MY_FLASHCARDS))
-    this.setState({myFlashcards: myFlashcards.data.myFlashcards})
   }
 
   render() {
@@ -52,55 +56,18 @@ class App extends React.Component<any, any>{
       return <Expo.AppLoading />
     }
     return (
-      <Container>
-        <Header>
-          <Left>
-            <Title>単語帳一覧</Title>
-          </Left>
-          <Right>
-            <Button transparent onPress={this.listFlashcards}>
-              <Icon type="FontAwesome" name="refresh"/>
-            </Button>
-          </Right>
-        </Header>
-        <Content padder>
-        {
-          this.state.myFlashcards && this.state.myFlashcards.map((flashcard: Flashcard, index: number)=> {
-            return(
-              <Card key={index}>
-                <CardItem header bordered style={{justifyContent: "center"}}>
-                  <Body>
-                    <Text style={{fontWeight: "bold"}}>{flashcard.word}</Text>
-                  </Body>
-                </CardItem>
-                <CardItem bordered>
-                  <Body>
-                    <Text>{flashcard.translation}</Text>
-                  </Body>
-                </CardItem>
-                <CardItem footer bordered>
-                  <Left>
-                    <Button transparent primary>
-                      <Icon active type="FontAwesome" name="tags" style={{fontSize: 20}}/>
-                    </Button>
-                  </Left>
-                  <Right>
-                    <Badge success>
-                      <Text>6 回検索</Text>
-                    </Badge>
-                  </Right>
-                </CardItem>
-              </Card>
-            )
-          })
-        }
-        </Content>
-      </Container>
+      <Router>
+        <Scene key="root" navBarButtonColor='#ffffff' titleStyle={this.styles.title} navigationBarStyle={this.styles.navBar} >
+          <Scene key="homePage" initial component={HomePage} title="メニュー" />
+          <Scene key="myFlashCardsPage" component={MyFlashCardsPage} title="単語帳一覧" />
+          <Scene key="flashCardDetailPage" component={FlashCardDetailPage} title="単語詳細" onBack={() => { Actions.myFlashCardsPage() }} back={true} />
+        </Scene>
+      </Router>
     )
   }
 }
 
-export default withAuthenticator(App, true, [
+export default withAuthenticator(App, false, [
   <SignIn />,
   <ConfirmSignIn />,
   <VerifyContact />,

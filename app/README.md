@@ -1,3 +1,24 @@
+# chocolateyインストール
+https://chocolatey.org/install
+
+# yarnインストール
+```bash
+choco install yarn
+```
+# nodeのダウングレード
+```bash
+#node version確認
+node -v 
+
+#バージョンインストール
+nodist + 10.15.2
+nodist 10.15.2
+
+# nodeバージョン変更確認
+node -v
+yarn versions 
+```
+
 # 1.type scriptインストール
 ```bash
 yarn add global typescript

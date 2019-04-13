@@ -1,0 +1,34 @@
+{
+"data" :[
+{
+    "word": "apple",
+    "wordClass": "名詞",
+    "pronounceMark": "ˈæpl",
+    "translation": [
+      "リンゴ 《★【解説】 リンゴは赤いというのが日本でのイメージであるが，黄色い (yellow) ものや青い(green) ものも多く，apple green (青リンゴ色)という表現もある; リンゴは New York 市のシンボルで，ニューヨーク市のことを the Big Apple という》.\n\nAn apple a day keeps the doctor away. 《諺》 一日一個のリンゴを食べれば医者はいらない.",
+      "＝apple tree."
+    ],
+    "s3SoundPath": "dummy"
+},
+{
+    "word": "as",
+    "wordClass": "副詞",
+    "pronounceMark": "(弱形) əz; (強形) ˈæz",
+    "s3SoundPath": "dummy",
+    "translation": [
+        "通例 as…as… で，形容詞・副詞の前に置いて] (…と)同じ程度に，同様に，同じくらい 《★as…as… で前の as が指示副詞，後の as は接続詞 (⇒接続詞 1)》."
+    ]
+},
+{
+    "word": "as",
+    "wordClass": "接続詞",
+    "pronounceMark": "(弱形) əz; (強形) ˈæz",
+    "s3SoundPath": "dummy",
+    "translation": [
+        "a\n[as [so]…as… で同程度の比較を表わして] …と同じく，…と同様に，…のように，…ほど (⇒ 副詞 ★).\n\nHe's as tall as I [me]. 彼は私と同じくらい背が高い 《★【用法】 文法的には as I (am) だがしばしば目的格も用いる》.\nAre you as good at English as him? あなたは彼と同じくらい英語が得意ですか.\nIt's not as [so] easy as you think. それは君の考えるほど容易ではない (⇒as 副詞【用法】).\n\nb\n[(as)…as… で直喩の慣用句をなして] …のように(実に，最も) 《★しばしば頭韻を踏む》.\n\n(as) busy as a bee とても忙しい.\n(as) cool as a cucumber とても冷静で.\n(as) black as a raven (カラスのように)真っ黒い.\n\nc\n[so [as]…as… で名詞の後に置いて] …ほどの.\n\nA man so clever as he is not likely to make such a blunder. 彼ほど頭の切れる男がそんなへまをやることはない.\n\nd\n[so…as to do で] …するほどに (⇒so１ 副詞 A6b).\n\nHe was so kind as to help me. 彼は親切にも私を助けてくれた 《「助けるほどに親切だった」の意》.",
+        "[様態・状態を表わして]\n\na\n…のように; …のままで.\n\nDo as you like. 好きなようにしなさい.\nDo in Rome as the Romans do. 《諺》 郷に入りては郷に従え.\nTake things as they are. 物事をありのままに受け入れよ 《現状に甘んじよ》.\nLeave them as they are. そのままにしておきなさい.\nas you know ご承知のように.\nEngland as it is 現在の英国.\nLiving as I do so remote from town, I rarely have visitors. なにしろこんないなかに住んでいるので訪ねてくれる人もまれだ 《★【用法】 doing as A does は分詞構文の強調形で「このとおり[実際] A は…しているので」の意》.\n\nb\n[as…so… で相関的に用いて] …のように，…と同じように.\n\nAs rust eats (into) iron, so care eats (into) the heart. 錆(さび)が鉄をむしばむと同じように心労は心をむしばむ.",
+        "a\n[時を表わして] …している時，…したとたんに; …しながら 《★【用法】 when よりも同時性の意味が強く，while とほぼ同様に用いられる》.\n\nHe came up (to me) as I was speaking. 私が話しているところへ彼がやってきた.\nJust as he began to speak, there was a loud explosion. ちょうど彼が話し始めた時に大爆発が起こった.\nHe trembled as he spoke. 彼は話しながら震えた.\n\nb\n[as a child，as children などの主語述語の省略の形で] (子供の)ころに，時には 《★【用法】本来同格語の前に as を添えたもので前置詞とも考えられる》.\n\nAs a boy he was a good swimmer. 彼は子供のころ泳ぎがうまかった."
+    ]
+}
+]
+}
